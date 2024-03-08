@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import Country from "./Country";
 import { environment } from "./environment";
 import { regions } from "./regions";
-import { Link } from "react-router-dom";
 
 export default function Home() {
   const [countries, setCountries] = useState([]);
@@ -11,7 +10,6 @@ export default function Home() {
   const [countriesByCommonName, setCountriesByCommonName] = useState([]);
   const [keyword, setKeyword] = useState("");
   const [region, setRegion] = useState("");
-  const [name, setName] = useState("");
 
   const handleSearch = (value: string) => {
     setKeyword(value);
@@ -74,8 +72,6 @@ export default function Home() {
           style={{ width: "100%" }}
         >
           <div className="flex border-2 rounded">
-            <p>{name}</p>
-
             <button className="flex items-center justify-center px-4 border-r">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
